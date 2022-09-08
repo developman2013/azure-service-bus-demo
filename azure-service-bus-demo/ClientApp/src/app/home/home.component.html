@@ -1,0 +1,12 @@
+<div *ngIf="messages?.length == 0">
+  <h1 class="display-1">Waiting for the first message...</h1>
+</div>
+
+<div *ngIf="messages?.length != 0" class="row">
+  <div *ngFor="let message of messages" class="card">
+    <div class="card-body">
+      <h4 class="card-subtitle mb-2 text-muted"><b>{{ message.username }}</b> </h4>
+        <h1 class="card-text display-5">{{ message.message }}</h1>
+    </div>
+  </div>
+</div>
